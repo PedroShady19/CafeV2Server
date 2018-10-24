@@ -6,7 +6,7 @@
     <color name="white">#FFFFFF</color>
     <color name="PlaceOrderBackground">#004d00</color>
     <color name="ButtonSignActive">#A9d440</color>
-
+    <color name="Red">#ff00</color>
 
 
     <color name="overlayBackground">#6667</color>
