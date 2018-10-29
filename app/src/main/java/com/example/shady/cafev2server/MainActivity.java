@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnSignIn =findViewById(R.id.btnSignUp);
+        btnSignIn =findViewById(R.id.btnSignIn);
         txtSlogan =findViewById(R.id.textSlogan);
 
         Typeface face= Typeface.createFromAsset(getAssets(),"fonts/Nabila.ttf");
