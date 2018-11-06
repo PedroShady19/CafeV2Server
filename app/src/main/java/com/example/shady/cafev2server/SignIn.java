@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.shady.cafev2server.Common.Common;
 import com.example.shady.cafev2server.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -67,7 +68,10 @@ public class SignIn extends AppCompatActivity {
                 {
                     if(user.getPassword().equals(localPassword))
                     {
-                        //Login Ok
+                        Intent login = new Intent(SignIn.this,Home.class);
+                        Common.currentUser = user;
+                        startActivity(login);
+                        finish();
                     }
                     else
                     {
