@@ -2,14 +2,14 @@ package com.example.shady.cafev2server.Model;
 
 public class Category {
     private String Name;
-    private String Image;
+    private String Imagem;
 
     public Category() {
     }
 
-    public Category(String name, String image) {
+    public Category(String name, String imagem) {
         Name = name;
-        Image = image;
+        Imagem = imagem;
     }
 
     public String getName() {
@@ -20,11 +20,11 @@ public class Category {
         Name = name;
     }
 
-    public String getImage() {
-        return Image;
+    public String getImagem() {
+        return Imagem;
     }
 
-    public void setImage(String image) {
-        Image = image;
+    public void setImagem(String imagem) {
+        Imagem = imagem;
     }
 }
