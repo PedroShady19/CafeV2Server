@@ -47,7 +47,7 @@ public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView txtFullName;
-    //Firebase
+    //Firebas
     FirebaseDatabase database;
     DatabaseReference categories;
     FirebaseStorage storage;
