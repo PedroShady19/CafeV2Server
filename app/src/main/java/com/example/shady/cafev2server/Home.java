@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.content.DialogInterface.OnClickListener;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -63,8 +64,9 @@ public class Home extends AppCompatActivity
     FButton btnUpload,btnSelect;
 
     Category newCategory;
-
     Uri saveUri;
+
+    DrawerLayout drawer;
     private final int PICK_IMAGE_REQUEST = 71;
 
 
@@ -91,7 +93,7 @@ public class Home extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -154,6 +156,7 @@ public class Home extends AppCompatActivity
                 if(newCategory !=null)
                 {
                     categories.push().setValue(newCategory);
+                    Snackbar.make(drawer,"New Category"+newCategory.getName()+"was added",Snackbar.LENGTH_SHORT).show();
 
                 }
             }
@@ -210,7 +213,7 @@ public class Home extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==PICK_IMAGE_REQUEST && requestCode == RESULT_OK
+        if(requestCode==PICK_IMAGE_REQUEST && resultCode == RESULT_OK
                 && data != null && data.getData()!= null)
         {
             saveUri =data.getData();
@@ -240,7 +243,7 @@ public class Home extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
