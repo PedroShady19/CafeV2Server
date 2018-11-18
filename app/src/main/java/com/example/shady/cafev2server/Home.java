@@ -145,7 +145,7 @@ public class Home extends AppCompatActivity
         });
 
         alertDialog.setView(add_menu_layout);
-        alertDialog.setIcon(R.drawable.ic_shopping_cart_black_24dp);
+        alertDialog.setIcon(R.drawable.ic_add_black_24dp);
 
         //Set Button
         alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
