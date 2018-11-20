@@ -45,6 +45,8 @@ import java.util.UUID;
 
 import info.hoang8f.widget.FButton;
 
+import static com.example.shady.cafev2server.Common.Common.PICK_IMAGE_REQUEST;
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -68,7 +70,7 @@ public class Home extends AppCompatActivity
     Uri saveUri;
 
     DrawerLayout drawer;
-    private final int PICK_IMAGE_REQUEST = 71;
+
 
 
     @Override
@@ -214,7 +216,7 @@ public class Home extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==PICK_IMAGE_REQUEST && resultCode == RESULT_OK
+        if(requestCode== PICK_IMAGE_REQUEST && resultCode == RESULT_OK
                 && data != null && data.getData()!= null)
         {
             saveUri =data.getData();
@@ -226,7 +228,7 @@ public class Home extends AppCompatActivity
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select Picture"),PICK_IMAGE_REQUEST);
+        startActivityForResult(Intent.createChooser(intent,"Select Picture"),Common.PICK_IMAGE_REQUEST);
 
     }
 
