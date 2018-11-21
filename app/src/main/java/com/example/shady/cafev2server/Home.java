@@ -383,6 +383,7 @@ public class Home extends AppCompatActivity
 
 
     }
+
     private void changeImage(final Category item) {
         if (saveUri != null)
         {
