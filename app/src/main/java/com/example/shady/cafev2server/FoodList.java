@@ -275,7 +275,7 @@ public class FoodList extends AppCompatActivity {
         btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeImage(item);
+                chooseImage();
 
             }
         });
@@ -283,7 +283,8 @@ public class FoodList extends AppCompatActivity {
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chooseImage();
+
+                changeImage(item);
             }
         });
 
@@ -302,6 +303,7 @@ public class FoodList extends AppCompatActivity {
                 foodList.child(key).setValue(item);
             }
         });
+
         alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {

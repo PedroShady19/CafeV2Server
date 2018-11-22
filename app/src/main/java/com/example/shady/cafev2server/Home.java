@@ -347,7 +347,7 @@ public class Home extends AppCompatActivity
         btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeImage(item);
+                chooseImage();
 
             }
         });
@@ -355,7 +355,7 @@ public class Home extends AppCompatActivity
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadImage();
+                changeImage(item);
             }
         });
 
@@ -380,8 +380,6 @@ public class Home extends AppCompatActivity
             }
         });
         alertDialog.show();
-
-
     }
 
     private void changeImage(final Category item) {
