@@ -298,8 +298,13 @@ public class Home extends AppCompatActivity
         } else if (id == R.id.nav_cart) {
 
         } else if (id == R.id.nav_orders) {
+            Intent orders= new Intent(Home.this,OrderStatus.class);
+            startActivity(orders);
 
         } else if (id == R.id.nav_sign_out) {
+            Intent signOut = new Intent(Home.this,SignIn.class);
+            signOut.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(signOut);
 
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
