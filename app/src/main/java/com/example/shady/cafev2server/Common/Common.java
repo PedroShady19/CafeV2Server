@@ -14,8 +14,9 @@ public class Common {
         if(code.equals("0"))
             return "Encomendado";
         else if(code.equals("1"))
-            return "Em Preparação";
+            return "A Preparar";
         else
             return "Enviado";
     }
+
 }
