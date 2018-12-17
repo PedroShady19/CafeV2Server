@@ -17,10 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
 import com.example.shady.cafev2server.Common.Common;
 import com.example.shady.cafev2server.Interface.ItemClickListener;
-import com.example.shady.cafev2server.Model.Category;
 import com.example.shady.cafev2server.Model.Food;
 import com.example.shady.cafev2server.ViewHolder.FoodViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

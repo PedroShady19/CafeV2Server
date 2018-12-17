@@ -154,12 +154,12 @@ public class TrackingOrder extends FragmentActivity implements OnMapReadyCallbac
                                                     orderLocation.latitude+","+yourLocation.longitude,"AIzaSyDaAZJFM9-Hjg3hj5ci-LKMXW7giiMLnM8")
                             .enqueue(new Callback<String>() {
                                 @Override
-                                public void onResponse(Call<String> call, Response<String> response) {
+                                public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response) {
                                     new ParserTask().execute(response.body().toString());
                                 }
 
                                 @Override
-                                public void onFailure(Call<String> call, Throwable t) {
+                                public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
 
                                 }
                             });
@@ -171,7 +171,7 @@ public class TrackingOrder extends FragmentActivity implements OnMapReadyCallbac
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
 
             }
         });
@@ -321,7 +321,7 @@ public class TrackingOrder extends FragmentActivity implements OnMapReadyCallbac
         protected void onPostExecute(List<List<HashMap<String, String>>> lists) {
             mDialog.dismiss();
 
-            ArrayList points= null;
+            ArrayList points;
             PolylineOptions lineOptions=null;
 
             for (int i=0;i<lists.size();i++){

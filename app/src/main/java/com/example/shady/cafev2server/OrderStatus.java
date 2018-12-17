@@ -7,20 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-
 import com.example.shady.cafev2server.Common.Common;
 import com.example.shady.cafev2server.Interface.ItemClickListener;
-import com.example.shady.cafev2server.Model.Order;
 import com.example.shady.cafev2server.Model.Request;
 import com.example.shady.cafev2server.ViewHolder.OrderViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
 public class OrderStatus extends AppCompatActivity {
