@@ -315,7 +315,7 @@ public class FoodList extends AppCompatActivity {
         if (saveUri != null)
         {
             final ProgressDialog mDialog = new ProgressDialog(this);
-            mDialog.setMessage("Uploading...");
+            mDialog.setMessage("Uploading....");
             mDialog.show();
 
             String imageName = UUID.randomUUID().toString();
