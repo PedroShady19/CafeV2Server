@@ -295,9 +295,8 @@ public class Home extends AppCompatActivity
 
         if (id == R.id.nav_menu) {
             // Handle the camera action
-        } else if (id == R.id.nav_cart) {
-
-        } else if (id == R.id.nav_orders) {
+        }
+          else if (id == R.id.nav_orders) {
             Intent orders= new Intent(Home.this,OrderStatus.class);
             startActivity(orders);
 
