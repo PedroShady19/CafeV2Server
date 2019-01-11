@@ -3,13 +3,16 @@ package com.example.shady.cafev2server.ViewHolder;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextMenu;
 import android.view.View;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 
 import com.example.shady.cafev2server.Interface.ItemClickListener;
 import com.example.shady.cafev2server.R;
 
-public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener , View.OnCreateContextMenuListener{
+public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener ,
+        View.OnLongClickListener,
+        View.OnCreateContextMenuListener{
 
     public TextView txtOrderId,txtOrderStatus,txtOrderPhone,txtOrderAddress;
     private ItemClickListener itemClickListener;
@@ -22,6 +25,7 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnC
         txtOrderStatus=itemView.findViewById(R.id.order_status);
 
         itemView.setOnClickListener(this);
+        itemView.setOnLongClickListener(this);
         itemView.setOnCreateContextMenuListener(this);
     }
 
@@ -40,5 +44,12 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnC
 
         contextMenu.add(0,0,getAdapterPosition(),"Update");
         contextMenu.add(0,1,getAdapterPosition(),"Delete");
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        itemClickListener.onClick(v,getAdapterPosition(),true);
+        
+        return true;
     }
 }
