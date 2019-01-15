@@ -107,7 +107,7 @@ public class OrderStatus extends AppCompatActivity {
         final View view = inflater.inflate(R.layout.update_order_layout,null);
 
         spinner=view.findViewById(R.id.statusSpinner);
-        spinner.setItems("Encomendado!","A Preparar","Enviado");
+        spinner.setItems("Encomendado","A Preparar","Enviado");
         alertDialog.setView(view);
 
         final String localkey = key;
