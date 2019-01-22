@@ -13,7 +13,7 @@ import com.example.shady.cafev2server.Remote.RetrofitCliente;
 public class Common {
     public static User currentUser;
     public static Request currentRequest;
-
+    public static String PHONE_TEXT= "userPhone";
     public static final String UPDATE = "Update";
     public static final String DELETE = "Delete";
     public static final int PICK_IMAGE_REQUEST = 71;
